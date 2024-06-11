@@ -72,3 +72,40 @@ header > * {
     text-align: center;
     align-items: center;
 }
+/* ------------ MainGRID ----------- */
+#mainGrid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    '. content content'
+    '. note note'
+    '. features cost'
+    '. email email';
+    grid-auto-rows: minmax(100px, auto);
+    /* background-color: lightgray; */
+}
+
+#content{
+    grid-area: content;
+    min-height: 400px;
+    padding: 2rem 4rem;
+    /* background-color: lightskyblue; */
+    border: 1px solid black;
+    border-top: none;
+    font-size: 1.3em;
+}
+ul {
+    margin-left: 50px;
+    list-style: square;
+    margin-bottom: 30px;
+}
+#note {
+    border: 1px solid black;
+    border-top: none;
+    min-height: 75px;
+    grid-area: note;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 64px;
+}
