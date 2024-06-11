@@ -9,6 +9,7 @@ body {
     font-weight: 200;
     font-style: normal;
     font-size: 1.2em;
+    margin-bottom: 500px;
 
 }
 /* ------------ Utility----------- */
@@ -22,8 +23,15 @@ body {
     justify-content: flex-start;
     align-items: center;
 }
+.hoverEffect:hover{
+    background-color: black;
+    color: white;
+}
 /* ------------ header----------- */
 header { 
+    background-color: white;
+    position: fixed;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-auto-rows: 85px;
@@ -85,14 +93,13 @@ header > * {
     '. features features'
     '. email email';
     grid-auto-rows: minmax(100px, auto);
-    /* background-color: lightgray; */
+    border-bottom: 1px solid black;
 }
 
 #content{
     grid-area: content;
     min-height: 400px;
     padding: 2rem 4rem;
-    /* background-color: lightskyblue; */
     border: 1px solid black;
     border-top: none;
 }
@@ -152,8 +159,15 @@ ul {
     align-items: center;
     border: 1px solid black;
     border-top: none;
+    border-bottom: none;
 }
 .emailAddress{
     color: black;
     text-decoration: none;
+}
+#email:hover a{
+    color: white;
+}
+#email:hover{
+    background-color: black;
 }
