@@ -24,6 +24,7 @@ body {
     align-items: center;
 }
 .hoverEffect:hover{
+    cursor: pointer;
     background-color: black;
     color: white;
 }
@@ -169,5 +170,6 @@ ul {
     color: white;
 }
 #email:hover{
+    cursor: pointer;
     background-color: black;
 }
