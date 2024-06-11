@@ -8,6 +8,8 @@ body {
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
+    font-size: 1.2em;
+
 }
 /* ------------ Utility----------- */
 .centerAlign { 
@@ -43,7 +45,7 @@ header > * {
 .menuSuggest > div {
     height: 100%;
 }
-.leftAlign > h2 {
+.leftAlign > p {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -69,8 +71,9 @@ header > * {
     height: 100%;
     grid-area: right ;
     display: grid;
-    text-align: center;
+    text-align: start;
     align-items: center;
+    padding-left: 65px;
 }
 /* ------------ MainGRID ----------- */
 #mainGrid {
@@ -79,7 +82,7 @@ header > * {
     grid-template-areas: 
     '. content content'
     '. note note'
-    '. features cost'
+    '. features features'
     '. email email';
     grid-auto-rows: minmax(100px, auto);
     /* background-color: lightgray; */
@@ -92,7 +95,6 @@ header > * {
     /* background-color: lightskyblue; */
     border: 1px solid black;
     border-top: none;
-    font-size: 1.3em;
 }
 ul {
     margin-left: 50px;
@@ -100,12 +102,58 @@ ul {
     margin-bottom: 30px;
 }
 #note {
+    grid-area: note;
     border: 1px solid black;
     border-top: none;
     min-height: 75px;
-    grid-area: note;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding-left: 64px;
+}
+
+/* ---------- featuresNcost -------- */
+#featuresNcost{
+    grid-area: features ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'features cost';
+}
+
+#features , #cost {
+    border: 1px solid black;
+    border-top: none;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+#features > p{
+    padding-top: 25px;
+    padding-left: 65px;
+}
+#features > ul {
+    margin-left: 105px;
+}
+#cost {
+    border-left: none;
+    padding: 1.4rem;
+}
+#pay{
+    margin-top: 2.4rem;
+    text-align: center;
+}
+
+#email{
+    grid-area: email;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-top: none;
+}
+.emailAddress{
+    color: black;
+    text-decoration: none;
 }
